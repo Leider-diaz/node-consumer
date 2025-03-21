@@ -1,7 +1,15 @@
-FROM node:17-alpine
+FROM node:18-alpine
 
-RUN npm install amqplib
+#Create a app directory
+WORKDIR /app
 
-COPY consumer.js /consumer.js
+#Install app dependencies
+COPY package*.json ./
+
+#Run npm install
+RUN npm install
+
+#Bundle app souce
+COPY . .
 
 CMD ["node", "./consumer.js"]
