@@ -1,7 +1,7 @@
 FROM node:18-alpine
 
 #Create a app directory
-WORKDIR /app
+WORKDIR /node-consumer
 
 #Install app dependencies
 COPY package*.json ./
