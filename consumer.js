@@ -1,7 +1,7 @@
 'use strict'
 
 const amqp = require('amqplib')
-const queue = 'cola2'
+const queue = 'cola3'
 
 function intensiveOperation() {
     let i = 1e3
